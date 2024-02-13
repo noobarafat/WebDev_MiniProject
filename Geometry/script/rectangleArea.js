@@ -1,19 +1,19 @@
 function calculateRectangleArea() {
 
-    // Get rectangle base value
-    const rectangleBaseInput = document.getElementById('rectangle-base');
-    const rectangleBaseText = rectangleBaseInput.value;
-    const base = parseFloat(rectangleBaseText)
-    console.log(base);
+    // Get rectangle Length value
+    const rectangleLengthInput = document.getElementById('rectangle-length');
+    const rectangleLengthText = rectangleLengthInput.value;
+    const length = parseFloat(rectangleLengthText)
+    console.log(length);
 
-    // Get rectangle height Value
-    const rectangleHeightInput = document.getElementById('rectangle-height');
-    const rectangleHeightText = rectangleHeightInput.value;
-    const height = parseFloat(rectangleHeightText);
-    console.log(height)
+    // Get rectangle Width Value
+    const rectangleWidthInput = document.getElementById('rectangle-width');
+    const rectangleWidthText = rectangleWidthInput.value;
+    const width = parseFloat(rectangleWidthText);
+    console.log(width)
 
     // Calculate rectangle area
-    const area = 0.5 * base * height;
+    const area = length * width;
     console.log("rectangle Area", area);
 
     // Display rectangle area
