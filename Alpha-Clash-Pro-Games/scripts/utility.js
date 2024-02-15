@@ -11,7 +11,7 @@ function showElementById(elementId) {
 
 function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.add('bg-pink-900')
+    element.classList.add('bg-pink-500')
 }
 
 function getARandomAlphabet() {
