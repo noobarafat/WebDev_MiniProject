@@ -32,9 +32,9 @@ function handleKeyboardKeyUpEvent(event) {
         setTextElementValueById('current-score', updatedScore);
 
         removeBackgroundColorById(expectedAlphabet);
-        continueGame(); 
+        continueGame();
 
-        
+
         /*
         // Update Score:
         // 1. get the current score
@@ -60,6 +60,10 @@ function handleKeyboardKeyUpEvent(event) {
         const currentLife = getTextElementValueById('current-life');
         const updateLife = currentLife - 1;
         setTextElementValueById('current-life', updateLife);
+
+        if(updateLife === 0){
+            gameOver();
+        }
 
 
 
@@ -123,8 +127,21 @@ function continueGame() {
 
 
 function play() {
+    // Hide everything, show only the playground
     hideElementById('home-screen');
+    hideElementById('final-score')
     showElementById('play-ground');
+
+    // reset score & life
+    setTextElementValueById('current-life', 5);
+    setTextElementValueById('current-score', 0)
     continueGame();
 }
+
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('final-score')
+
+}
+
 
