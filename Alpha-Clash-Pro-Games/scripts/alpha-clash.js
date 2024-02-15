@@ -27,6 +27,15 @@ function handleKeyboardKeyUpEvent(event) {
     if (playerPressed === expectedAlphabet) {
         console.log('Right key pressed');
 
+        const currentScore = getTextElementValueById('current-score');
+        const updatedScore = currentScore + 1;
+        setTextElementValueById('current-score', updatedScore);
+
+        removeBackgroundColorById(expectedAlphabet);
+        continueGame(); 
+
+        
+        /*
         // Update Score:
         // 1. get the current score
         const currentScoreElement = document.getElementById('current-score');
@@ -44,8 +53,20 @@ function handleKeyboardKeyUpEvent(event) {
         // Start new round
         removeBackgroundColorById(expectedAlphabet);
         continueGame();
+
+        */
     } else {
         console.log('Wrong pressed');
+        const currentLife = getTextElementValueById('current-life');
+        const updateLife = currentLife - 1;
+        setTextElementValueById('current-life', updateLife);
+
+
+
+
+
+
+        /*
         // step 1: get the current life number
         const currentLifeElement = document.getElementById('current-life');
         const currentLifeText = currentLifeElement.innerText;
@@ -55,7 +76,7 @@ function handleKeyboardKeyUpEvent(event) {
 
         // step 3: display updated life count
         currentLifeElement.innerText = newLife;
-
+        */
     }
 
 
