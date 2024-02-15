@@ -14,6 +14,11 @@ function setBackgroundColorById(elementId){
     element.classList.add('bg-pink-500')
 }
 
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-pink-500')
+}
+
 function getARandomAlphabet() {
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
