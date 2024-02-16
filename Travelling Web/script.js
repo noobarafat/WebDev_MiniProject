@@ -17,9 +17,16 @@ for (const btn of allBtn) {
         li.appendChild(p2);
         selectedContainer.appendChild(li)
 
+        const totalCost = document.getElementById("total-cost").innerText;
+        const convertTotalCost = parseInt(totalCost);
+        const sum = convertTotalCost + parseInt(price);
+        document.getElementById("total-cost").innerText = sum;
+
         setInnerText("cart-count", count);
     });
 }
+
+
 
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
