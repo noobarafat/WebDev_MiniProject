@@ -17,23 +17,41 @@ for (const btn of allBtn) {
         li.appendChild(p2);
         selectedContainer.appendChild(li)
 
+        /*
         const totalCost = document.getElementById("total-cost").innerText;
         const convertTotalCost = parseInt(totalCost);
         const sum = convertTotalCost + parseInt(price);
+        */
+
         // document.getElementById("total-cost").innerText = sum;
 
+        /*
         const grandTotal = document.getElementById("grand-total").innerText;
         const convertedGrandTotal = parseInt(grandTotal);
-        const sum2 = convertedGrandTotal + sum;
-        
+        const sum2 = convertedGrandTotal + parseInt(price);
+        */
 
-        setInnerText("grand-total", sum2);
-        setInnerText("total-cost", sum);
+        GrandTotalCost("grand-total", parseInt(price))
+        totalCost("total-cost", parseInt(price));
+
         setInnerText("cart-count", count);
     });
 }
 
+function totalCost(id, value) {
 
+    const totalCost = document.getElementById(id).innerText;
+    const convertTotalCost = parseInt(totalCost);
+    const sum = convertTotalCost + parseInt(value);
+    setInnerText(id, sum);
+}
+function GrandTotalCost(id, value) {
+
+    const totalCost = document.getElementById(id).innerText;
+    const convertTotalCost = parseInt(totalCost);
+    const sum = convertTotalCost + parseInt(value);
+    setInnerText(id, sum);
+}
 
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
