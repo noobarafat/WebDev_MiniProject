@@ -20,8 +20,15 @@ for (const btn of allBtn) {
         const totalCost = document.getElementById("total-cost").innerText;
         const convertTotalCost = parseInt(totalCost);
         const sum = convertTotalCost + parseInt(price);
-        document.getElementById("total-cost").innerText = sum;
+        // document.getElementById("total-cost").innerText = sum;
 
+        const grandTotal = document.getElementById("grand-total").innerText;
+        const convertedGrandTotal = parseInt(grandTotal);
+        const sum2 = convertedGrandTotal + sum;
+        
+
+        setInnerText("grand-total", sum2);
+        setInnerText("total-cost", sum);
         setInnerText("cart-count", count);
     });
 }
